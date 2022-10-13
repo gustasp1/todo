@@ -14,6 +14,8 @@ const app = express();
 app.use(express.json());
 app.use(cors({ credentials: true, origin: true }));
 
+console.log(process.env.MONGO_URI);
+
 app.use(
   session({
     secret: process.env.SECRET,
@@ -39,6 +41,8 @@ app.get("*", (req, res) => {
 
 app.use(errorHandler);
 
-app.listen(3004, () => {
-  console.log("listening on 3004");
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+  console.log(`listening on ${port}`);
 });
