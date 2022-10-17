@@ -14,8 +14,6 @@ const app = express();
 app.use(express.json());
 app.use(cors({ credentials: true, origin: true }));
 
-console.log(process.env.MONGO_URI);
-
 app.use(
   session({
     secret: process.env.SECRET,

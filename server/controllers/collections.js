@@ -5,7 +5,6 @@ const User = connection.models.User;
 const Collection = connection.models.Collection;
 
 const getCollections = async (req, res, next) => {
-  console.log("hahha");
   try {
     const response = await User.findOne({ _id: req.user._id }).populate(
       "collections"
