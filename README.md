@@ -1,3 +1,3 @@
 # todo
 
-website is hosted at https://sldlasdallsdalads.herokuapp.com/
+The application is hosted at https://todoapp-7pwk.onrender.com
